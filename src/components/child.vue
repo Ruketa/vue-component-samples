@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Child</h1>
+    <h1>
+      <slot>Default Title</slot>
+    </h1>
     <div class="hstack">
       <h3>{{ title }}</h3>
       <button class="item" @click="increment">likes</button> 
@@ -34,8 +36,6 @@ export default defineComponent({
   },
   emits: ["increment"],
   setup(props, context) {
-
-    console.log(context.attrs.class)
 
     const count = ref(props.start)
     const increment = () => {
