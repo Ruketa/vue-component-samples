@@ -2,8 +2,10 @@
   <div>
     <h1>Parent</h1>
     <child class="child" title="Push!!" :start="start" @increment="increment">
+      <!--slotへの設定がない場合はデフォルト値が設定される-->
     </child>
     <child class="child" title="Push!!" :start="start" @increment="increment">
+      <!--slotで挿入される-->
       {{childSlot}}
     </child>
 
